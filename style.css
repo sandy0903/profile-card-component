@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width:100%;
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:hsl(185, 75%, 39%);
+    position: relative;
+    overflow: hidden;
+   
+}
+body::before{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:-14rem;
+    background-size: 50% 100%;
+    background-image: url(./images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    
+}
+body::after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-size:  60%;
+    top:50%;
+    right:-50%;
+    background-image: url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    
+}
+
+.container{
+    width:25%;
+    height:50vh;
+    background-color:#fff;
+    position: relative;
+   
+    z-index:2;
+    border-radius: 20px;
+    overflow: hidden;
+    color:hsl(229, 23%, 23%);
+    font-family:  'Kumbh Sans', sans-serif;
+   
+}
+.container .top{
+    height:20vh;
+    background-image: url(./images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    
+}
+.container img{
+    width:80px;
+    border-radius:50%;
+    position: absolute;
+    top:88px;
+    left:35%;
+}
+.container .infor{
+    text-align: center;
+}
+.container .infor h3{
+    margin-top:3.5rem;
+}
+.grid-col{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    margin-top:2rem;
+    padding:1rem 0;
+    border-top: 1px solid hsl(0, 0%, 59%);
+}
+span,p{
+    font-size: 14px;
+    color:hsl(0, 0%, 59%);
+}
+.attribution{
+    position: absolute;
+    bottom:0;
+}
+/* media query for mobile device 375px*/
+@media only screen and (max-width:375px){
+    .container{
+        width:90%;
+        height:55vh;
+    }
+    .card{
+        height:100%;
+    }
+    .grid-col{
+        padding-bottom:0;
+        
+    }
+}
